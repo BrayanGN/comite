@@ -1,3 +1,15 @@
+BOTONES --> .color1 { #a0e682 };
+HOVER --> .color2 { #b8ec9b };
+HOVER INPUTS --> .color3 { #d0f3b4 };
+FONDO --> .color5 { #ffff };
+INPUT --> #e0e0e0
+BORDE DEL FORMULARIO --> #e0e0e0
+FONDO FORMULARIO --> .color5 { #ffff };
+NAVBAR --> #6afa06
+FOOTER --> #6afa06
+LOGO --> #00ad00
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
