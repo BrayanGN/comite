@@ -48,8 +48,13 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Role:</strong>
-                {!! Form::select('roles[]', $roles, [], ['class' => 'form-control', 'multiple']) !!}
+                <strong hidden>Role:</strong>
+                @role('Admin')
+                    <strong>Role:</strong>
+                    {!! Form::select('roles[]', $roles, [], ['class' => 'form-control', 'multiple']) !!}
+                @else
+                    {!! Form::text('roles', 'Aprendiz', ['placeholder' => 'Rol', 'class' => 'form-control', 'hidden' => 'hidden']) !!}
+                @endrole
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

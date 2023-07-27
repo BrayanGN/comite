@@ -20,8 +20,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel 9 User Roles and Permissions Tutorial Example - LaravelTuts.com
+                <a class="navbar-brand" href="{{ url('/users') }}">
+                    S
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -48,7 +48,9 @@
                                 </li>
                             @endif
                         @else
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                            @role('Admin')
+                                <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                            @endrole
                             <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
                             <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
                             <li class="nav-item dropdown">
