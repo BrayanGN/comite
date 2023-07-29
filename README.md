@@ -1,14 +1,36 @@
-BOTONES --> .color1 { #a0e682 };
-HOVER --> .color2 { #b8ec9b };
-HOVER INPUTS --> .color3 { #d0f3b4 };
-FONDO --> .color5 { #ffff };
-INPUT --> #e0e0e0
-BORDE DEL FORMULARIO --> #e0e0e0
-FONDO FORMULARIO --> .color5 { #ffff };
-NAVBAR --> #6afa06
-FOOTER --> #6afa06
-LOGO --> #00ad00
-LOGO SENA -> #1F883D
+<h1>
+    <ol>
+        <li>BOTONES --> #a0e682</li>
+        <li>HOVER --> #b8ec9b</li>
+        <li>HOVER INPUTS --> #d0f3b4</li>
+        <li>FONDO --> #ffff</li>
+        <li>INPUT --> #e0e0e0</li>
+        <li>BORDE DEL FORMULARIO --> #e0e0e0</li>
+        <li>FONDO FORMULARIO -->  #ffff</li>
+        <li>NAVBAR --> #6afa06</li>
+        <li>FOOTER --> #6afa06</li>
+        <li>LOGO --> #00ad00</li>
+        <li>LOGO SENA -> #1F883D</li>
+    </ol>
+</h1>
+
+<hr>
+    <h2>
+        Prototipo Principal:
+        <a href="https://laraveltuts.com/laravel-9-user-roles-and-permissions-tutorial-example/">Enlace a la pagina</a>
+    </h2>
+<hr>
+
+<h1>Comandos</h1>
+<hr>
+<h1 style="color:red">
+    <ul>
+        <li>php artisan make:seeder PermissionTableSeeder</li>
+        <li>php artisan db:seed --class=PermissionTableSeeder</li>
+        <li>php artisan make:seeder CreateAdminUserSeeder</li>
+        <li>php artisan db:seed --class=CreateAdminUserSeeder</li>
+    </ul>
+</h1>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
