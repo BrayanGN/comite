@@ -13,7 +13,7 @@ LOGO SENA -> #1F883D
 
 https://laraveltuts.com/laravel-9-user-roles-and-permissions-tutorial-example/
 
-COMANDOS -->
+<h1>Comandos</h1>
 # php artisan make:seeder PermissionTableSeeder
 # php artisan db:seed --class=PermissionTableSeeder
 # php artisan make:seeder CreateAdminUserSeeder
