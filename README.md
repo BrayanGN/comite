@@ -1,16 +1,18 @@
-<ol>
-    <li>BOTONES --> #a0e682</li>
-    <li>HOVER --> #b8ec9b</li>
-    <li>HOVER INPUTS --> #d0f3b4</li>
-    <li>FONDO --> #ffff</li>
-    <li>INPUT --> #e0e0e0</li>
-    <li>BORDE DEL FORMULARIO --> #e0e0e0</li>
-    <li>FONDO FORMULARIO -->  #ffff</li>
-    <li>NAVBAR --> #6afa06</li>
-    <li>FOOTER --> #6afa06</li>
-    <li>LOGO --> #00ad00</li>
-    <li>LOGO SENA -> #1F883D</li>
-</ol>
+<h1>
+    <ol>
+        <li>BOTONES --> #a0e682</li>
+        <li>HOVER --> #b8ec9b</li>
+        <li>HOVER INPUTS --> #d0f3b4</li>
+        <li>FONDO --> #ffff</li>
+        <li>INPUT --> #e0e0e0</li>
+        <li>BORDE DEL FORMULARIO --> #e0e0e0</li>
+        <li>FONDO FORMULARIO -->  #ffff</li>
+        <li>NAVBAR --> #6afa06</li>
+        <li>FOOTER --> #6afa06</li>
+        <li>LOGO --> #00ad00</li>
+        <li>LOGO SENA -> #1F883D</li>
+    </ol>
+</h1>
 
 <hr>
     <h2>
