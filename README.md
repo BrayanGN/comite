@@ -14,12 +14,15 @@ LOGO SENA -> #1F883D
 https://laraveltuts.com/laravel-9-user-roles-and-permissions-tutorial-example/
 
 <h1>Comandos</h1>
-<h1 styles="color: red">
- php artisan make:seeder PermissionTableSeeder
- php artisan db:seed --class=PermissionTableSeeder
- php artisan make:seeder CreateAdminUserSeeder
- php artisan db:seed --class=CreateAdminUserSeeder
- </h1>
+<hr>
+<h1 style="color:red">
+    <ul>
+        <li>php artisan make:seeder PermissionTableSeeder</li>
+        <li>php artisan db:seed --class=PermissionTableSeeder</li>
+        <li>php artisan make:seeder CreateAdminUserSeeder</li>
+        <li>php artisan db:seed --class=CreateAdminUserSeeder</li>
+    </ul>
+</h1>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
