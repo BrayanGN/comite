@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Tutorial de Laravel 9 sobre Roles y Permisos de Usuario') }}</title>
+    {{-- <title>{{ config('app.name', 'Tutorial de Laravel 9 sobre Roles y Permisos de Usuario') }}</title> --}}
 
     @vite(['resources/js/app.js'])
 
@@ -50,10 +50,11 @@
                             @endif
                         @else
                             @role('Admin')
-                                <li><a class="nav-link" href="{{ route('users.index') }}">Gestionar Usuarios</a></li>
+                                <li><a class="nav-link" href="{{ route('users.index') }}">Usuarios</a></li>
                             @endrole
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Gestionar Roles</a></li>
-                            <li><a class="nav-link" href="{{ route('products.index') }}">Gestionar Productos</a></li>
+                            <li><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
+                            <li><a class="nav-link" href="{{ route('products.index') }}">Productos</a></li>
+                            <li><a class="nav-link" href="{{ route('programas.index') }}">Programas</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

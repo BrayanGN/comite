@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProgramaController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -30,6 +31,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('programas', ProgramaController::class);
 });
 Route::group(['middleware' => ['auth','role:Admin']], function() {
     Route::resource('users', UserController::class);

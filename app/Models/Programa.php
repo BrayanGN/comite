@@ -5,12 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Programa extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name', 'detail'
+        'pro_codigo', 'pro_nombre', 'pro_nivelformacion'
     ];
-
 }
+
+
+// solicitud de comite
+// comite
+// faltas
+// articulos
