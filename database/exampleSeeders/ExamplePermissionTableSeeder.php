@@ -24,7 +24,11 @@ class PermissionTableSeeder extends Seeder
             'programa-list',
             'programa-create',
             'programa-edit',
-            'programa-delete'
+            'programa-delete',
+            'aprendiz-list',
+            'aprendiz-create',
+            'aprendiz-edit',
+            'aprendiz-delete'
         ];
 
         foreach ($permissions as $permission) {
