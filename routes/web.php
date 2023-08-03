@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AprendizController;
+use App\Http\Controllers\ComiteController;
 use App\Http\Controllers\ProgramaController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('products', ProductController::class);
     Route::resource('programas', ProgramaController::class);
     Route::resource('aprendizs', AprendizController::class);
+    Route::resource('comites', ComiteController::class);
 });
 Route::group(['middleware' => ['auth','role:Admin']], function() {
     Route::resource('users', UserController::class);

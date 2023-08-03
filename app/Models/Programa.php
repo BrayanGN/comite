@@ -19,3 +19,8 @@ class Programa extends Model
 // comite
 // faltas
 // articulos
+
+// Instructor
+// Ficha
+// Aprendiz
+// Programa
