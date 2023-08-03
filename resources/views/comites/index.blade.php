@@ -40,7 +40,8 @@
                 <td>{{ $comite->com_acta }}</td>
                 <td>{{ $comite->com_estado }}</td>
                 <td>{{ $comite->com_recomendacion }}</td>
-                <td>{{ $comite->com_instructorsolicitante_fk }}</td>
+                {{-- <td>{{ $comite->com_instructorsolicitante_fk }}</td> --}}
+                <td>{{ $userName -> name }}</td>
                 <td>
                     <form action="{{ route('comites.destroy', $comite->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('comites.show', $comite->id) }}">Ver</a>

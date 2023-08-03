@@ -24,3 +24,6 @@ class Programa extends Model
 // Ficha
 // Aprendiz
 // Programa
+
+
+// Arreglando nombres en Comite -> index, show desde el controlador de comite

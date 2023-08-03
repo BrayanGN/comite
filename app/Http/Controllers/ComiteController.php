@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comite;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ComiteController extends Controller
@@ -16,8 +17,10 @@ class ComiteController extends Controller
     }
     public function index()
     {
+        // $userName = User::find($comite -> com_instructorsolicitante_fk);
+
         $comites = Comite::latest()->paginate(5);
-        return view('comites.index', compact('comites'))
+        return view('comites.index', compact('comites', 'userName'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -47,7 +50,8 @@ class ComiteController extends Controller
 
     public function show(Comite $comite)
     {
-        return view('comites.show', compact('comite'));
+        $userName = User::find($comite -> com_instructorsolicitante_fk);
+        return view('comites.show', compact('comite', 'userName'));
     }
 
     public function edit(Comite $comite)
