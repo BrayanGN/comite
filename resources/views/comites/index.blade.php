@@ -30,33 +30,63 @@
             <th>Instructor Solicitante</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($comites as $comite)
+        @for ($i = 0; $i < count($userNames); $i++)
             <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $comite->com_fechasolicitud }}</td>
-                <td>{{ $comite->com_descripcionsolicitud }}</td>
-                <td>{{ $comite->com_tipofalta }}</td>
-                <td>{{ $comite->com_carpetanexos }}</td>
-                <td>{{ $comite->com_acta }}</td>
-                <td>{{ $comite->com_estado }}</td>
-                <td>{{ $comite->com_recomendacion }}</td>
-                {{-- <td>{{ $comite->com_instructorsolicitante_fk }}</td> --}}
-                <td>{{ $userName -> name }}</td>
-                <td>
-                    <form action="{{ route('comites.destroy', $comite->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('comites.show', $comite->id) }}">Ver</a>
-                        @can('comite-edit')
-                            <a class="btn btn-primary" href="{{ route('comites.edit', $comite->id) }}">Edit</a>
-                        @endcan
-                        @csrf
-                        @method('DELETE')
-                        @can('comite-delete')
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                        @endcan
-                    </form>
-                </td>
+                @if (!Auth::user()->hasRole('Admin'))
+                    @if (Auth::user()->id == $comites[$i]->com_instructorsolicitante_fk)
+                        <td hidden>{{ $i++ }}</td>
+                        <td>{{ $i }}</td>
+                        <td hidden>{{ $i-- }}</td>
+                        <td>{{ $comites[$i]->com_fechasolicitud }}</td>
+                        <td>{{ $comites[$i]->com_descripcionsolicitud }}</td>
+                        <td>{{ $comites[$i]->com_tipofalta }}</td>
+                        <td>{{ $comites[$i]->com_carpetanexos }}</td>
+                        <td>{{ $comites[$i]->com_acta }}</td>
+                        <td>{{ $comites[$i]->com_estado }}</td>
+                        <td>{{ $comites[$i]->com_recomendacion }}</td>
+                        <td>{{ $userNames[$i] }}</td>
+                        <td>
+                            <form action="{{ route('comites.destroy', $comites[$i]->id) }}" method="POST">
+                                <a class="btn btn-info" href="{{ route('comites.show', $comites[$i]->id) }}">Ver</a>
+                                @can('comite-edit')
+                                    <a class="btn btn-primary" href="{{ route('comites.edit', $comites[$i]->id) }}">Edit</a>
+                                @endcan
+                                @csrf
+                                @method('DELETE')
+                                @can('comite-delete')
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                @endcan
+                            </form>
+                        </td>
+                    @endif
+                @else
+                    <td hidden>{{ $i++ }}</td>
+                    <td>{{ $i }}</td>
+                    <td hidden>{{ $i-- }}</td>
+                    <td>{{ $comites[$i]->com_fechasolicitud }}</td>
+                    <td>{{ $comites[$i]->com_descripcionsolicitud }}</td>
+                    <td>{{ $comites[$i]->com_tipofalta }}</td>
+                    <td>{{ $comites[$i]->com_carpetanexos }}</td>
+                    <td>{{ $comites[$i]->com_acta }}</td>
+                    <td>{{ $comites[$i]->com_estado }}</td>
+                    <td>{{ $comites[$i]->com_recomendacion }}</td>
+                    <td>{{ $userNames[$i] }}</td>
+                    <td>
+                        <form action="{{ route('comites.destroy', $comites[$i]->id) }}" method="POST">
+                            <a class="btn btn-info" href="{{ route('comites.show', $comites[$i]->id) }}">Ver</a>
+                            @can('comite-edit')
+                                <a class="btn btn-primary" href="{{ route('comites.edit', $comites[$i]->id) }}">Edit</a>
+                            @endcan
+                            @csrf
+                            @method('DELETE')
+                            @can('comite-delete')
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            @endcan
+                        </form>
+                    </td>
+                @endif
             </tr>
-        @endforeach
+        @endfor
     </table>
     {!! $comites->links() !!}
 @endsection

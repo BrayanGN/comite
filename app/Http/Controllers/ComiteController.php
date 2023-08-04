@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comite;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ComiteController extends Controller
 {
@@ -17,10 +18,19 @@ class ComiteController extends Controller
     }
     public function index()
     {
-        // $userName = User::find($comite -> com_instructorsolicitante_fk);
-
-        $comites = Comite::latest()->paginate(5);
-        return view('comites.index', compact('comites', 'userName'))
+        $comites = Comite::latest()->paginate(6);
+        $ids = [];
+        $userNames = [];
+        foreach ($comites as $comite) {
+            array_push($ids, $comite->com_instructorsolicitante_fk);
+        }
+        foreach ($ids as $id) {
+            $userF = User::find($id);
+            array_push($userNames, $userF->name);
+        }
+        $userLog = Auth::user()->id;
+        $user = Auth::user()->load('roles');
+        return view('comites.index', compact('comites', 'userNames', 'userLog'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -50,7 +60,7 @@ class ComiteController extends Controller
 
     public function show(Comite $comite)
     {
-        $userName = User::find($comite -> com_instructorsolicitante_fk);
+        $userName = User::find($comite->com_instructorsolicitante_fk);
         return view('comites.show', compact('comite', 'userName'));
     }
 
@@ -85,4 +95,3 @@ class ComiteController extends Controller
             ->with('success', 'Comite deleted successfully');
     }
 }
-
