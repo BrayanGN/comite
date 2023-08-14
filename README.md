@@ -1,8 +1,11 @@
 <h3>
-    instalar: 
-    npm install -D tailwindcss postcss autoprefixer
-    y
-    npx tailwindcss init -p
+    <li> instalar: </li>
+    <li>npm install -D tailwindcss postcss autoprefixer</li>
+    <li> y</li>
+    <li>npx tailwindcss init -p</li>
+    
+   
+    
 </h3>
 
 <h1>
