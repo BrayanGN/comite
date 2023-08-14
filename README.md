@@ -1,3 +1,10 @@
+<h3>
+    instalar: 
+    npm install -D tailwindcss postcss autoprefixer
+    y
+    npx tailwindcss init -p
+</h3>
+
 <h1>
     <ol>
         <li>BOTONES --> #a0e682</li>
